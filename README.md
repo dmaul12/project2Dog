@@ -9,3 +9,5 @@ Using the list of Citi bike locations in NYC from NYC Open Data the user will be
 3: List how many bikes are available at the selected station 
 
 4: Show the bike stations on google maps
+
+![alt text](screenshots/HP.png "Home Page")
