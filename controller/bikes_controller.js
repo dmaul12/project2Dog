@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const bikeDB = require('../models/bikeDB')
-const request = require('request');
+// const request = require('request');
 
 router.get('/',bikeDB.searchBikes, function(req,res) {
   res.render('searchBikes/bikes');

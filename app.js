@@ -10,6 +10,7 @@ const methodOverride      = require('method-override');
 
 const homeControl         = require('./controller/home_controller');
 const bikesControl        = require('./controller/bikes_controller');
+const apiControl         = require('./controller/api_controller')
 
 const dbBikes             = require('./models/bikeDB')
 
@@ -32,10 +33,8 @@ app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', homeControl);
+app.use('/api', apiControl);
 app.use('/search', bikesControl);
 
-// app.get('/', dbBikes)
 
-
-// app.use(cors('/search', bikesControl))
 

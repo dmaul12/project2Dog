@@ -12,6 +12,8 @@ searchBikes: function(req,res,next){
     filterObj['availableBikes']= new RegExp('^' + req.query.availableBikes, 'i');
   }
 
+  console.log(req.query.stationName)
+
 request({
     url:'https://feeds.citibikenyc.com/stations/stations.json',
     method:'get',
@@ -22,9 +24,12 @@ request({
   },(err,result,body)=>{
     if (err) throw err;
 
+    /// this is where I should run filter function and assign a variable
+    // to the res.filterbike = body.variable
     console.log(result);
     // res.send(result)
     res.filterbike = body.stationBeanList
+
     next()
   })
 
