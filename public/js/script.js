@@ -18,10 +18,10 @@ titleObj['availableBikes']=$('.availableBikes').val()
 
 $.ajax({
 
-  url:'http://citibikenyc.com/stations/json',
+  // https://feeds.citibikenyc.com/stations/stations.json
+  url:'search/bikeSearch',
   method: 'GET',
   dataType: 'json',
-  data: titleObj,
   success: function(data) {
     let $div= $('.list')
     $ul.empty();

@@ -6,9 +6,12 @@ const logger              = require('morgan');
 const bodyParser          = require('body-parser');
 const session             = require('express-session');
 const methodOverride      = require('method-override');
+// const cors                = require('cors')
 
 const homeControl         = require('./controller/home_controller');
 const bikesControl        = require('./controller/bikes_controller');
+
+// const dbBikes             = require('./models/bikeDB')
 
 const app                 = express()
 const PORT                = process.env.PORT || process.argv[2] || 3000
@@ -30,4 +33,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', homeControl);
 app.use('/search', bikesControl);
+
+
+// app.use(cors('/search', bikesControl))
 
