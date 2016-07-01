@@ -1,0 +1,33 @@
+
+h1{
+  color:#ffcccc;
+  text-shadow: 2px 2px blue;
+}
+
+.container{
+  opacity: 0.5;
+  background-color: white;
+  margin: auto;
+  padding: 40px;
+  max-width: 100%;
+
+
+}
+
+input[type=text] {
+    background-color: green;
+    color: yellow;
+
+}
+ul{
+
+  border: 2px solid black;
+  max-width: 100%;
+  max-height: 300px;
+}
+
+
+ul{
+  color: #FF99FF;
+  overflow-y: auto; margin-bottom: 120px;
+}

@@ -19,7 +19,7 @@ titleObj['availableBikes']=$('.availableBikes').val()
 $.ajax({
 
   // https://feeds.citibikenyc.com/stations/stations.json
-  url:'search/bikeSearch',
+  url:'/search',
   method: 'GET',
   dataType: 'json',
   success: function(data) {
