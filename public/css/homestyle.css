@@ -1,0 +1,43 @@
+body{
+  background-image: url("/image/citibike.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+section{
+  text-align: center;
+  padding-bottom: 2px;
+}
+h1{
+
+ background-color: black;
+ text-align: center;
+ color: #00008B;
+ font-family: 'Trocchi', serif;
+ font-size: 90px;
+ font-weight: normal;
+ line-height: 48px;
+ margin-top: 30px;
+ text-shadow: 3px 3px white;
+}
+
+div.transbox {
+    margin: 20px;
+    background-color: #ffffff;
+    border: 3px solid black;
+    opacity: 0.8;
+  }
+
+  div.transbox p {
+    text-align: center;
+    margin: 5%;
+    font-weight: bold;
+    color: #000000;
+}
+  div.transbox a {
+
+    padding-bottom: 2px;
+    font-weight: bold;
+    color: green;
+}
+

@@ -6,7 +6,11 @@ const $ul     = $('<ul>');
 const $button = $('.search-bikes')
 
 $button.on('click', function(){
+  console.log('button clicked')
 const titleObj = {};
+
+// let $station = $('.stationName').val();
+// let $bikes = $('.availableBikes').val();
 
     if($('.stationName').val()!== ''){
 titleObj['stationName']=$('.status').val()
@@ -15,6 +19,12 @@ titleObj['stationName']=$('.status').val()
 titleObj['availableBikes']=$('.availableBikes').val()
 }
 
+// if($station) titleObj.stationName = $station
+// if($bikes) titleObj.availableBikes = $bikes
+//   console.log(titleObj, 'title Object')
+
+
+//{stationName:$('.stationName').val() }
 
 $.ajax({
 
@@ -22,7 +32,7 @@ $.ajax({
   url:'/api/bikeData',
   method: 'GET',
   dataType: 'json',
-  data: {stationName:$('.stationName').val() },
+  data: titleObj,
   success: function(data) {
     let $div= $('.list')
     $ul.empty();

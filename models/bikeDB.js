@@ -4,31 +4,53 @@ module.exports ={
 
 searchBikes: function(req,res,next){
 
-    const filterObj = {};
+  let filterObj = {};
   if('stationName' in req.query){
     filterObj['stationName']= new RegExp('^' + req.query.stationName, 'i');
-  }
+  }  console.log("filter obj: ", filterObj)
   if('availableBikes' in req.query){
-    filterObj['availableBikes']= new RegExp('^' + req.query.availableBikes, 'i');
+    filterObj['availableBikes']= req.query.availableBikes;
   }
 
-  console.log(req.query.stationName)
+  // console.log(req.query.stationName)
+
+
 
 request({
     url:'https://feeds.citibikenyc.com/stations/stations.json',
     method:'get',
-    qs:
-      filterObj
-    ,
+    qs:filterObj,
     json:true
   },(err,result,body)=>{
     if (err) throw err;
 
+
+
     /// this is where I should run filter function and assign a variable
     // to the res.filterbike = body.variable
-    console.log(result);
+    // console.log('this stuff',body.stationBeanList[0].stationName);
     // res.send(result)
-    res.filterbike = body.stationBeanList
+
+    let filteredList;
+    if('stationName' in req.query) {
+      filteredList = body.stationBeanList.filter(function(item) {
+        //do the filter looking for station name
+        return req.query.stationName == item.stationName
+      })
+    } else if ('availableBikes' in req.query) {
+      filteredList = body.stationBeanList.filter(function(item) {
+        //do the filter looking for number of bikes
+        return req.query.availableBikes == item.availableBikes
+      })
+    }
+    res.filterbike = body.stationBeanList.filter(function(item) {
+      let ret = false;
+      if (filterObj['stationName']) {
+
+      }
+    })
+
+// console.log("this is the filtered list", item)
 
     next()
   })
