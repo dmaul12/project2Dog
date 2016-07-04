@@ -1,13 +1,13 @@
 # project2CitiBike
 
-Using the list of Citi bike locations in NYC from NYC Open Data the user will be able to do the following. 
+As a user the user will be able to request the number of Citi Bikes available per location. So if the user wanted to know how many bikes are available at the W 52nd location, the user can see the number of bikes in the dock.
 
-1: Create a user name 
+Also, the user can check if the destination station has available docks available. So if the user's destination is Atlantic & Furman Street location, the user can see the number of docks available.
 
-2: Search or select bike stations
+Both filter functions allow the user to know beforehand if bikes or docks are availble. This saves time and hassle for the users.
 
-3: List how many bikes are available at the selected station 
+The login in feature will save the users past start and destination stations.
 
-4: Show the bike stations on google maps
+
 
 ![alt text](screenshots/HP.png "Home Page")
