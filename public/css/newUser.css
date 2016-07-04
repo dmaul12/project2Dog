@@ -1,0 +1,41 @@
+body{
+    background-image: url("/image/cabs.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+form{
+    text-align: center;
+    font-size: 40px;
+    color:yellow;
+    text-shadow: 3px 3px black;
+
+}
+input{
+    font-size: 30px;
+    display:inline-block;
+}
+
+label{
+    display:inline-block;
+    width: 200px;
+}
+
+input[type=submit]{
+  margin-top: 55px;
+  margin-right:-160px;
+  cursor: hand;
+  box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+  color:#333;
+  background-color:yellow;
+  border-radius:5px;
+  border:none;
+  font-family:'Helvetica Neue',Arial,sans-serif;
+  font-size:16px;
+  font-weight:700;
+  height:36px;
+  padding:4px 16px;
+
+
+}

@@ -40,4 +40,8 @@ div.transbox {
     font-weight: bold;
     color: green;
 }
+form{
+  text-align: center;
+  margin-bottom: 40px;
+}
 

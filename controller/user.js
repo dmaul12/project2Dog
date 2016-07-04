@@ -31,5 +31,5 @@ router.delete('/logout', function(req,res) {
 });
 
 module.exports = router;
-Status API Training Shop Blog About
+
 

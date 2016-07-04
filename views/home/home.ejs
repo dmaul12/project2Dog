@@ -12,6 +12,17 @@
   <div class="transbox">
     <p>Please click on the link below to find Citi Bike locations near you</p>
     <a href="/search">Bike Locations</a>
+    <p>Create New User please set up an account</p>
+    <a href="/user/new">New User</a>
+    <p>Current user please login below</p>
+
+    <form action="/user/login" method="post">
+    <label for="">Email:</label>
+    <input type="text" name="email"><br>
+    <label for="">Password:</label>
+    <input type="password" name="password"><br>
+    <input type="submit" value="Login">
+  </form>
   </div>
   </section>
 </body>
