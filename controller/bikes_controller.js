@@ -3,7 +3,7 @@ const bikeDB = require('../models/bikeDB')
 // const request = require('request');
 
 router.get('/',bikeDB.searchBikes, function(req,res) {
-  res.render('searchBikes/bikes');
+  res.render('searchBikes/bikes',{user: req.session.user});
 
 });
 

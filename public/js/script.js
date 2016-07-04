@@ -5,12 +5,11 @@ const $body   = $('body');
 const $ul     = $('<ul>');
 const $button = $('.search-bikes')
 
+// the button on click will start the ajax function and the title object should use the specific Value to append the location
+
 $button.on('click', function(){
   console.log('button clicked')
 const titleObj = {};
-
-// let $station = $('.stationName').val();
-// let $bikes = $('.availableBikes').val();
 
     if($('.stationName').val()!== ''){
 titleObj['stationName']=$('.status').val()
@@ -18,17 +17,14 @@ titleObj['stationName']=$('.status').val()
 } if($('.availableBikes').val()!== ''){
 titleObj['availableBikes']=$('.availableBikes').val()
 }
+if($('.availableDocks').val()!== ''){
+titleObj['availableDocks']=$('.availableDocks').val()
+}
 
-// if($station) titleObj.stationName = $station
-// if($bikes) titleObj.availableBikes = $bikes
-//   console.log(titleObj, 'title Object')
-
-
-//{stationName:$('.stationName').val() }
+// the ajax is appending the info into the search page
 
 $.ajax({
 
-  // https://feeds.citibikenyc.com/stations/stations.json
   url:'/api/bikeData',
   method: 'GET',
   dataType: 'json',
@@ -40,11 +36,11 @@ $.ajax({
       data.forEach(function(bikes) {
         let $stationName = $('<li>').text(bikes.stationName);
         let $availableBikes=$('<li>').text(bikes.availableBikes);
+        let $availableDocks=$('<li>').text(bikes.availableDocks);
 
         $ul.append('stationName',$stationName);
         $ul.append('availableBikes',$availableBikes);
-
-
+        $ul.append('availableDocks',$availableDocks);
 
       })
       $div.append($ul);

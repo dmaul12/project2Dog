@@ -7,7 +7,14 @@
   <link rel="stylesheet" href="/css/homestyle.css">
 </head>
 <body>
-  <h1>Welcome to Citi Bike Search</h1>
+<h1>
+  <% if(user){ %>
+    Welcome, <%= user.fname %> <%= user.lname %>
+  <% } else { %>
+    Welcome, Guest
+  <% } %>
+  </h1>
+  <!-- <h1>Welcome to Citi Bike Search</h1> -->
   <section>
   <div class="transbox">
     <p>Please click on the link below to find Citi Bike locations near you</p>
@@ -24,6 +31,11 @@
     <input type="submit" value="Login">
   </form>
   </div>
-  </section>
+
+  <div>
+    <form method="post" action="user/logout?_method=DELETE">
+      <input type="submit" value="Logout">
+    </form>
+   </div>
 </body>
 </html>

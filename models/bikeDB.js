@@ -7,10 +7,14 @@ searchBikes: function(req,res,next){
   let filterObj = {};
   if('stationName' in req.query){
     filterObj['stationName']= new RegExp('^' + req.query.stationName, 'i');
-  }  console.log("filter obj: ", filterObj)
+  }
   if('availableBikes' in req.query){
     filterObj['availableBikes']= req.query.availableBikes;
   }
+  // if('availableDocks' in req.query){
+  //   filterObj['availableDocks']= new RegExp('^' + req.query.availableDocks, 'i');
+  // }
+
 
   // console.log(req.query.stationName)
 
@@ -36,9 +40,10 @@ request({
     // let filteredList;
     // if('stationName' in req.query) {
     //   filteredList = body.stationBeanList.filter(function(item) {
-    //     //do the filter looking for station name
-    //     return req.query.stationName == item.stationName
-    //   })
+        //do the filter looking for station name
+        // return req.query.stationName == item.stationName
+      //   console.log("this is",item.stationName)
+      // })
     // } else if ('availableBikes' in req.query) {
     //   filteredList = body.stationBeanList.filter(function(item) {
     //     //do the filter looking for number of bikes
@@ -52,7 +57,7 @@ request({
     //   }
     // })
 
-// console.log("this is the filtered list", item)
+// console.log("this is the filtered list", item.stationBeanList.stationName)
 
     next()
   })

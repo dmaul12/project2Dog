@@ -9,11 +9,19 @@
   <script type="text/javascript" src="/js/script.js"></script>
 </head>
 <body>
-<h1>Search for bikes</h1>
+<h1>
+  <% if(user){ %>
+    Welcome, <%= user.fname %> <%= user.lname %>
+  <% } else { %>
+    Welcome, Guest
+  <% } %>
+  </h1>
+<!-- <h1>Search for bikes</h1> -->
   <p>Use the following parameters to find the status and address of Citi Bikes</p>
   <div class="container">
   <input type="text" class="stationName" placeholder="stationName">
   <input type="text" class="availableBikes" placeholder="availableBikes">
+  <input type="text" class="availableDocks" placeholder="availableDocks">
   <button class="search-bikes">Search</button>
   </div>
   <div class="list"></div>
