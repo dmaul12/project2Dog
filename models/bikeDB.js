@@ -40,10 +40,10 @@ request({
     // let filteredList;
     // if('stationName' in req.query) {
     //   filteredList = body.stationBeanList.filter(function(item) {
-        //do the filter looking for station name
-        // return req.query.stationName == item.stationName
-      //   console.log("this is",item.stationName)
-      // })
+    //     do the filter looking for station name
+    //     return req.query.stationName == item.stationName
+    //     console.log("this is",item.stationName)
+    //   })
     // } else if ('availableBikes' in req.query) {
     //   filteredList = body.stationBeanList.filter(function(item) {
     //     //do the filter looking for number of bikes
